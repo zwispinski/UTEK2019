@@ -13,7 +13,7 @@ def Part1(file_name):
             items.append(myitem)
             i+=1
     items.sort()
-    a=file_name.lstrip(".in")
+    a=file_name.rstrip(".in")
     a=a+".out"
     past=None
     num =0
@@ -25,7 +25,8 @@ def Part1(file_name):
         if past==y:
             num+=1
             z="Product Number: " + y.content[2]+"; Weight: "+y.content[3]+"; Qty: "+str(num)+"; Location: ("+y.content[0]+", "+y.content[2]+")\n"
-            replace_line(a,line-1,z)
+            b=line-1
+            replace_line(a,b,z)
         else:
             num = 1
             z="Product Number: " + y.content[2]+"; Weight: "+y.content[3]+"; Qty: "+str(num)+"; Location: ("+y.content[0]+", "+y.content[2]+")\n"
