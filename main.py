@@ -8,7 +8,7 @@ from writeFile import writeFile
 #from distance import distance
 import numpy
 
-filename = "Competition Package/5a.in"
+filename = "Competition\ Package/5a.in"
 
 
 #read the file input and create a graph of items and robots

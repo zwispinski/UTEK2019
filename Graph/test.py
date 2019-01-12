@@ -24,3 +24,4 @@ AM = G.makeAdjMatrix()
 for r in AM:
     print(r)
 print()
+print(Dijkstra(G, 0))

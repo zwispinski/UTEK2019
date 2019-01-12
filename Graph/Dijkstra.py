@@ -1,15 +1,17 @@
 #does not require any helper files
 
-def Dijkstra(G,start):
+def Dijkstra(G, start):
     N = len(G.adj)
 
-    L = range(0,N)
+    L = []
+    for i in range(N):
+        L += [i]
     dist = [-1]*N # we'll call this infinity since -1 doesn't overlap legit values of dist
     prev = [-1]*N # we'll call this undefined since -1 doesn't overlap legit values of vertex indices
 
     dist[start] = 0
     while len(L) != 0:
-        # I: find minIdx \in L s.t. dist[minIdx] is minimized
+        # I: find minIdx in L s.t. dist[minIdx] is minimized
         minDist = -1
         minIdx  = -1
         for i in L:
@@ -21,8 +23,9 @@ def Dijkstra(G,start):
             return [False,dist,prev]
 
         # II: remove minIdx from L
-        L.remove(minIdx)
-
+        print(minIdx, L)
+        del L[minIdx]
+        
         # III:  for all neighbors,x, of minIdx that are in L
         #           if d < dist[minIdx]:
         #               update dist[x] = d
@@ -39,4 +42,4 @@ def Dijkstra(G,start):
 #not done
 def ShortestPath(G,v0,vf):
     out = Dijkstra(G,v0)
-    return False
+    return out
