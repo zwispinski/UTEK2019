@@ -12,22 +12,47 @@ filename = "Competition Package/5a.in"
 
 
 #read the file input and create a graph of items and robots
-lines = readFile(filename)
 
-lines[1] =  
+lines = readFile(filename)
+#numbering things 
+numberingList = lines[0].split(",")
+numberOfRobots = int(numberingList[0].strip(),10)
+numberOfItems = int(numberingList[1].strip(),10)
+numberOfObstacles = int(numberingList[2].strip(),10)
+#make the list of robots
+robots = []
+for i in range(numberOfRobots):
+	robots += [[i,0]]
+#make the list of items
+items = []
+for i in range(numberOfItems):
+	items += []
+
+#create list of robots
+robots = []
+for i in range ()
+#create list of obstacles
+obstacles = 
+#create graph with given the obstacles
+
 
 #partition the file input using the knapsack problem
+for i in robots()
 listOfObjectsInPartition = knapsack(list, location)
-
 
 #implement the travelling salesman problem on each partition
 #input to the tsp is distance matrix
 #output of tps to be determined (string)
-tsp()
+tps()
 
 #perform each timestep while recording the robots' movements; involves robots yielding to other robots
 #given this list use dijkstra on the big graph
-dijkstra()
+
+dijkstraOutput = dijkstra(startLocation, endLocation)
+
+#convert the output of dijkstra to a list of instructions for robot the robot
+
+
 
 
 
