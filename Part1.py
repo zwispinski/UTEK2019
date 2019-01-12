@@ -1,3 +1,5 @@
+#Run this file with the test cases in the same folder to produce the desired output files
+
 from readFile import readFile
 from writeFile import writeFile
 from item import item
@@ -34,3 +36,7 @@ def Part1(file_name):
             writeFile(a,z)
             past = y
             line +=1
+            
+Part1('1a.in')
+Part1('1b.in')
+Part1('1c.in')
