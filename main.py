@@ -9,7 +9,7 @@ from writeFile import writeFile
 from graph import graph # fix this line based on the 
 import numpy
 
-filename = "Competition Package/5a.in"
+filename = "Competition\ Package/5a.in"
 
 
 #read the file input and create a graph of items and robots
