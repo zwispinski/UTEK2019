@@ -32,8 +32,16 @@ for i in range(numberOfItems):
 
 
 #create list of obstacles
-obstacles = 
-
+obstacles = []
+for i in range (numberOfObstacles):
+	a=lines[numberOfRobots+numberOfItems+i]
+	a=a.lstrip('(')
+	a=a.rstrip(')')
+	b=a.split(', ')
+	c=[]
+	for num in b:
+		c.append(num)
+	obstacles.append(c)
 #create graph with given the obstacles
 
 
