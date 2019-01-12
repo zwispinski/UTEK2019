@@ -9,7 +9,10 @@ class graph:
         for i in range(0,n):
             self.adj += [[]]
         return len(self.adj)
-
+	
+	def __getItem__(self, n):
+		return self.adj[n]
+		
     def addEdge(self,from_idx,to_idx,directed,weight):
         #error checks
         if from_idx < 0 or from_idx >= len(self.adj):
