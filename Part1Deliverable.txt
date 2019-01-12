@@ -1,1 +1,1 @@
-Product Number: 3; Weight: 2.5; Qty: 1; Location: (2, 3)
+

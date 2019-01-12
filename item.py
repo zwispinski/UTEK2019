@@ -13,5 +13,5 @@ class item(object):
         return int(self.content[2])>=int(other.content[2])
     def __gt__(self, other):
         return int(self.content[2])>int(other.content[2])
-    
-            
+    def __str__(self):
+        return content

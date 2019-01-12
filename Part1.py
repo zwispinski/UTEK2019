@@ -13,11 +13,11 @@ def Part1(file_name):
             items.append(myitem)
             i+=1
     items.sort()
-    x = open("Part1Deliverable.txt","w+")
-    x.close
+    a=file_name.lstrip(".in")
+    a=a+".out"
     past=None
     num =0
-    line = 1
+    line = 0
     
     #Product Number: 1; Weight: 5.0; Qty: 1; Location: (2, 1)
     
@@ -25,14 +25,14 @@ def Part1(file_name):
         if past==y:
             num+=1
             z="Product Number: " + y.content[2]+"; Weight: "+y.content[3]+"; Qty: "+str(num)+"; Location: ("+y.content[0]+", "+y.content[2]+")\n"
-            replace_line("Part1Deliverable.txt",line-1,z)
+            replace_line(a,line-1,z)
         else:
             num = 1
             z="Product Number: " + y.content[2]+"; Weight: "+y.content[3]+"; Qty: "+str(num)+"; Location: ("+y.content[0]+", "+y.content[2]+")\n"
-            writeFile("Part1Deliverable.txt",z)
+            writeFile(a,z)
             past = y
             line +=1
 
 
 
-Part1("part1_in.txt")
+Part1("1a.in")
