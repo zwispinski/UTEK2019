@@ -59,18 +59,23 @@ for x in range(101):
 		
 
 #partition the file input using the knapsack problem
-for i in robots()
-listOfObjectsInPartition = knapsack(list, location)
+while (True):
+	itemsTemp = items.copy()
+	for roboCoords in robots()
+		distanceToRobot = distanceList(robotCoords, )
+		
+		weightOfItem = 
+		listOfObjectsInPartition = candidateSets(distanceInverseList, weightList, capacitylocation)
 
 #implement the travelling salesman problem on each partition
 #input to the tsp is distance matrix
 #output of tps to be determined (string)
-tps()
+listInOrder = tps()
 
 #perform each timestep while recording the robots' movements; involves robots yielding to other robots
 #given this list use dijkstra on the big graph
 
-dijkstraOutput = dijkstra(startLocation, endLocation)
+dijkstraOutput = path(startLocation, endLocation)
 
 #convert the output of dijkstra to a list of instructions for robot the robot
 
@@ -85,4 +90,24 @@ def N2coord(N):
     x=N%101
     return [x,y]
 
+def distanceList(xy,items):
+    ret=[]
+    for i in items:
+        dx=xy[0]-int(i.content[0])
+        dy=xy[1]-int(i.content[1])
+        ret.append(((dx**2)+(dy**2))**0.5)
+    return ret
+	
+def coordList(xy,items):
+    ret=[]
+    for i in items:
+        xcoord=int(i.content[0])
+        ycoord=int(i.content[1])
+        
+    return [xcoord,ycoord]
 
+def weightList(items):
+    ret =[]
+    for i in items:
+        ret.append(i.content[3])
+    return ret
