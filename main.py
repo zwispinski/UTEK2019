@@ -26,13 +26,14 @@ for i in range(numberOfRobots):
 #make the list of items
 items = []
 for i in range(numberOfItems):
-	items += []
+	itemInfo = lines[i+1]
+	createdItem = item(itemInfo)
+	items+= createdItem
 
-#create list of robots
-robots = []
-for i in range ()
+
 #create list of obstacles
 obstacles = 
+
 #create graph with given the obstacles
 
 
