@@ -15,11 +15,12 @@ def Part1(file_name):
     items.sort()
     a=file_name.rstrip(".in")
     a=a+".out"
-    past=None
+    f=open(a,'r+')
+    f.truncate(0)
+    f.close
+    past=item('(-1,-1,-1,-1)')
     num =0
     line = 0
-    
-    #Product Number: 1; Weight: 5.0; Qty: 1; Location: (2, 1)
     
     for y in items:
         if past==y:
@@ -33,7 +34,3 @@ def Part1(file_name):
             writeFile(a,z)
             past = y
             line +=1
-
-
-
-Part1("1a.in")
