@@ -6,18 +6,22 @@ def writeFile(file_name, line):
         print ("ERR: file", file_name, "is not present or can't be opened")
         print("ERR: file", file_name, "is not present or can't be opened")
 
-    g = open(file_name, 'w+')   # + means if the file does not exist, then python will create it
+    g = open(file_name, 'a')   # + means if the file does not exist, then python will create it
     g.write(line)
     g.close()
 
 # If you want to replace a line of a textfile
 def replace_line(file_name, line_num, text):
-    lines = open(file_name, 'r').readlines()
+    f = open(file_name,"r+")
+    d = f.readlines()
+    f.seek(0)
+    x=d[len(d)-1]
+    for i in d:
+        if i != x:
+            f.write(i)
+    f.truncate()
+    f.write(text)
+    f.close()
 
-    #print (lines[line_num]) #line being replaced
-    print(lines)
-    print(line_num)
-   # lines[line_num] = text
-    #out = open(file_name, 'w')
-    #out.writelines(lines)
-    #out.close()
+
+   
